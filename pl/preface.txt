@@ -1,12 +1,12 @@
-= Git Magic =
+= Magia Gita =
 Ben Lynn
-August 2007
+Sierpień 2007
 
-== Preface ==
+== Przedmowa ==
 
-http://git-scm.com/[Git] is a version control Swiss army knife. A reliable versatile multipurpose revision control tool whose extraordinary flexibility makes it tricky to learn, let alone master.
+http://git-scm.com/[Git] jest szwajcarskim scyzorykiem w świecie systemów kontroli wersji. Git to niezawodny i uniwersalny system kontroli wersji, którego elastycznośc sprawia, że jego nauka może sprawiać kłopoty, zwłaszcza w przypadku skomplikowanych zagadnień.
 
-As Arthur C. Clarke observed, any sufficiently advanced technology is indistinguishable from magic. This is a great way to approach Git: newbies can ignore its inner workings and view Git as a gizmo that can amaze friends and infuriate enemies with its wondrous abilities.
+Arthur C. Clarke stwierdził: "każda wystarczająco skomplikowana technologia jest nierozróżnialna od magii". Jest to świetny sposób na postrzeganie Gita: początkujący mogą zignorować jego wewnętrzne mechanizmy i traktować Gita jak czarną skrzynkę, która potrafi zadziwić przyjaciół i rozwścieczyć wrogów za pomocą swoich cudownych możliwości.
 
 Rather than go into details, we provide rough instructions for particular effects. After repeated use, gradually you will understand how each trick works, and how to tailor the recipes for your needs.
 
