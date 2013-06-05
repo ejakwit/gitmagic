@@ -8,12 +8,12 @@ http://git-scm.com/[Git] jest szwajcarskim scyzorykiem w świecie systemów kont
 
 Arthur C. Clarke stwierdził: "każda wystarczająco skomplikowana technologia jest nierozróżnialna od magii". Jest to świetny sposób na postrzeganie Gita: początkujący mogą zignorować jego wewnętrzne mechanizmy i traktować Gita jak czarną skrzynkę, która potrafi zadziwić przyjaciół i rozwścieczyć wrogów za pomocą swoich cudownych możliwości.
 
-Rather than go into details, we provide rough instructions for particular effects. After repeated use, gradually you will understand how each trick works, and how to tailor the recipes for your needs.
+Zamiast wchodzić w szczegóły, zaprezentujemy zgrubne instrukcje prowadzące do osiągnięcia konkretnych efektów. W miarę pracy z Gitem, stopniowo zrozumiesz jak działa każda z procedur oraz jak dostosować je do swoich potrzeb. 
 
-.Translations
+.Tłumaczenia
 
- - link:/\~blynn/gitmagic/intl/zh_cn/[Simplified Chinese]: by JunJie, Meng and JiangWei. Converted to link:/~blynn/gitmagic/intl/zh_tw/[Traditional Chinese] via +cconv -f UTF8-CN -t UTF8-TW+.
- - link:/~blynn/gitmagic/intl/fr/[French]: by Alexandre Garel, Paul Gaborit, and Nicolas Deram. Also hosted at http://tutoriels.itaapy.com/[itaapy].
+ - link:/\~blynn/gitmagic/intl/zh_cn/[chiński uproszczony]: JunJie, Meng and JiangWei. Przekonwertowany na link:/~blynn/gitmagic/intl/zh_tw/[chiński tradycyjny] przy użyciu +cconv -f UTF8-CN -t UTF8-TW+.
+ - link:/~blynn/gitmagic/intl/fr/[French]: Alexandre Garel, Paul Gaborit oraz Nicolas Deram. Also hosted at http://tutoriels.itaapy.com/[itaapy].
  - link:/~blynn/gitmagic/intl/de/[German]: by Benjamin Bellee and Armin Stebich; also http://gitmagic.lordofbikes.de/[hosted on Armin's website].
  - http://www.slideshare.net/slide_user/magia-git[Portuguese]: by Leonardo Siqueira Rodrigues [http://www.slideshare.net/slide_user/magia-git-verso-odt[ODT version]].
  - link:/~blynn/gitmagic/intl/ru/[Russian]: by Tikhon Tarnavsky, Mikhail Dymskov, and others.
