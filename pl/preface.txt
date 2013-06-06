@@ -12,21 +12,21 @@ Zamiast wchodzić w szczegóły, zaprezentujemy zgrubne instrukcje prowadzące d
 
 .Tłumaczenia
 
- - link:/\~blynn/gitmagic/intl/zh_cn/[chiński uproszczony]: JunJie, Meng and JiangWei. Przekonwertowany na link:/~blynn/gitmagic/intl/zh_tw/[chiński tradycyjny] przy użyciu +cconv -f UTF8-CN -t UTF8-TW+.
- - link:/~blynn/gitmagic/intl/fr/[French]: Alexandre Garel, Paul Gaborit oraz Nicolas Deram. Also hosted at http://tutoriels.itaapy.com/[itaapy].
- - link:/~blynn/gitmagic/intl/de/[German]: by Benjamin Bellee and Armin Stebich; also http://gitmagic.lordofbikes.de/[hosted on Armin's website].
- - http://www.slideshare.net/slide_user/magia-git[Portuguese]: by Leonardo Siqueira Rodrigues [http://www.slideshare.net/slide_user/magia-git-verso-odt[ODT version]].
- - link:/~blynn/gitmagic/intl/ru/[Russian]: by Tikhon Tarnavsky, Mikhail Dymskov, and others.
- - link:/~blynn/gitmagic/intl/es/[Spanish]: by Rodrigo Toledo and Ariset Llerena Tapia.
- - link:/~blynn/gitmagic/intl/uk/[Ukrainian]: by Volodymyr Bodenchuk.
- - link:/~blynn/gitmagic/intl/vi/[Vietnamese]: by Trần Ngọc Quân; also http://vnwildman.users.sourceforge.net/gitmagic/[hosted on his website].
+ - link:/\~blynn/gitmagic/intl/zh_cn/[chiński uproszczony]: JunJie, Meng and JiangWei. Przekonwertowane na link:/~blynn/gitmagic/intl/zh_tw/[chiński tradycyjny] przy użyciu +cconv -f UTF8-CN -t UTF8-TW+.
+ - link:/~blynn/gitmagic/intl/fr/[francuski]: Alexandre Garel, Paul Gaborit oraz Nicolas Deram. Dostępne również pod adresem: http://tutoriels.itaapy.com/[itaapy].
+ - link:/~blynn/gitmagic/intl/de/[niemiecki]: Benjamin Bellee i Armin Stebich. Dostępne również na http://gitmagic.lordofbikes.de/[stronie Armina].
+ - http://www.slideshare.net/slide_user/magia-git[portugalski]: Leonardo Siqueira Rodrigues [http://www.slideshare.net/slide_user/magia-git-verso-odt[wersja ODT]].
+ - link:/~blynn/gitmagic/intl/ru/[rosyjski]: Tikhon Tarnavsky, Mikhail Dymskov oraz inni.
+ - link:/~blynn/gitmagic/intl/es/[hiszpański]: Rodrigo Toledo i Ariset Llerena Tapia.
+ - link:/~blynn/gitmagic/intl/uk/[ukraiński]: Volodymyr Bodenchuk.
+ - link:/~blynn/gitmagic/intl/vi/[wietnamski]: Trần Ngọc Quân. Dostępne również na http://vnwildman.users.sourceforge.net/gitmagic/[tej stronie].
 
-.Other Editions
+.Inne wydania
 
- - link:book.html[Single webpage]: barebones HTML, with no CSS.
- - link:book.pdf[PDF file]: printer-friendly.
- - http://packages.debian.org/gitmagic[Debian package], http://packages.ubuntu.com/gitmagic[Ubuntu package]: get a fast and local copy of this site. Handy http://csdcf.stanford.edu/status/[when this server is offline].
- - http://www.amazon.com/Git-Magic-Ben-Lynn/dp/1451523343/[Physical book [Amazon.com]]: 64 pages, 15.24cm x 22.86cm, black and white. Handy when there is no electricity.
+ - link:book.html[jako jeden plik]: podstawowy HTML, bez CSS.
+ - link:book.pdf[plik PDF]: do wydruku.
+ - http://packages.debian.org/gitmagic[pakiet na Debiana], http://packages.ubuntu.com/gitmagic[pakiet na Ubuntu]: do pobrania szybka w przeglądaniu, kopia lokalna tej strony. Przydatny adres http://csdcf.stanford.edu/status/[gdy ten serwer jest niedostępny].
+ - http://www.amazon.com/Git-Magic-Ben-Lynn/dp/1451523343/[Wydanie książkowe [Amazon.com]]: 64 stron, 15.24cm x 22.86cm, wersja czarno-biała. Przydatne w razie braku prądu.
 
 === Thanks! ===
 
