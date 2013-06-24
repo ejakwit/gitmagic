@@ -1,4 +1,4 @@
-== Basic Tricks ==
+﻿== Basic Tricks ==
 
 Rather than diving into a sea of Git commands, use these elementary examples to
 get your feet wet. Despite their simplicity, each of them are useful.
