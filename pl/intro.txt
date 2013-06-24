@@ -20,25 +20,28 @@ W niektórych grach, zapisany stan zawiera katalog pełen plików. Takie gry ukr
 
 Systemy kontroli wersji działają tak samo. Wszystkie mają wygodne interfejsy służące do zarządzania katalogiem zawierającym różne rzeczy. Możesz często zapisywać stan katalogu, a w razie potrzeby masz możliwość odtworzenia dowolnego stanu z przeszłości. W przeciwieństwie do większości gier, systemy kontroli wersji są sprytne w zakresie oszczędzania przestrzeni. Zwykle, tylko kilka plików uległo zmianom pomiędzy wersjami a ich charakter jest drobny. Przechowywanie informacji o różnicach pomiędzy plikami zamiast kopiowania plików pozwala zaoszczędzić przestrzeń. 
 
-=== Distributed Control ===
+=== Rozproszona kontrola ===
 
-Now imagine a very difficult computer game. So difficult to finish that many experienced gamers all over the world decide to team up and share their saved games to try to beat it. Speedruns are real-life examples: players specializing in different levels of the same game collaborate to produce amazing results.
+A teraz, wyobraź sobie bardzo trudną grę komputerową. Tak trudną do ukończenia, że aby ją ukończyć wielu doświadczonych graczy z całego świata zdecydowało połączyć siły i współdzielić swoje zapisane stany gry, po to aby wspólnie ukończyć grę. Speedruny są przykładem ze świata rzeczywistego: gracze specjalizujący się w graniu na poszczególnych etapach tej samej gry współpracują, aby osiągnąć zadziwiające rezultaty. 
 
-How would you set up a system so they can get at each other's saves easily? And upload new ones?
+Jak skonstruować system umożliwiający łatwy dostęp do zapisanych stanów gry innych osób oraz ładowanie nowych stanów gry?
 
-In the old days, every project used centralized version control. A server somewhere held all the saved games. Nobody else did. Every player kept at most a few saved games on their machine. When a player wanted to make progress, they'd download the latest save from the main server, play a while, save and upload back to the server for everyone else to use.
+W dawnych czasach, każdy projekt używał scentralizowanej kontroli wersji. Jedynie zdalny serwer przechowywał wszystkie zapisane gry. Poza tym, każdy gracz przechowywał co najwyżej kilka stanów gry na swojej maszynie. Gdy któryś z graczy chciał przejść kolejny etap gry, musiał on pobrać ostatni stan z serwera głównego, pograć chwilę, zapisać stan a następnie wysłać go na serwer główny tak, żeby inni mogli z niego skorzystać.  
 
-What if a player wanted to get an older saved game for some reason? Maybe the current saved game is in an unwinnable state because somebody forgot to pick up an object back in level three, and they want to find the latest saved game where the game can still be completed. Or maybe they want to compare two older saved games to see how much work a particular player did.
+Co jeśli gracz, z jakiegoś powodu, chciałby odzyskać starszy stan gry? Być może obecnie przechowywane stany gry uniemożliwiają ukończenie gry ponieważ ktoś zapomniał wcześniej zebrać przedmiot na poziomie trzecim. W takiej sytuacji, gracze chcieliby odnaleźć najmniej odległy w czasie stan gry w którym jej ukończenie jest jeszcze możliwe. Być może, gracze chcieliby porównać dwa starsze stany gry, aby zobaczyć ile pracy wykonały każdy z graczy. 
 
-There could be many reasons to want to see an older revision, but the outcome is the same. They have to ask the central server for that old saved game. The more saved games they want, the more they need to communicate.
+Możemy wyobrazić sobie wiele powodów dla których chcielibyśmy powrócić do starszej rewizji, ale (w przypadku systemu scentralizowanego) rezultat będzie zawsze taki sam. Musielibyśmy połączyć się z serwerem centralnym, aby pobrać starszą wersję stany gry. Im więcej wersji byśmy potrzebowali, tym więcej komunikacji sieciowej byłoby wymagane. 
 
-The new generation of version control systems, of which Git is a member, are known as distributed systems, and can be thought of as a generalization of centralized systems. When players download from the main server they get every saved game, not just the latest one. It's as if they're mirroring the central server.
+Systemy kontroli wersji nowej generacji, do których zalicza się Git, nazywamy systemami rozproszonymi i możemy traktować je jako uogólnienie systemów zcentralizowanych. Gdy gracze pobierają pliki z serwera głównego otrzymują oni wszystkie zapisane do tej pory wersje - nie jedynie najnowsze. W ten sposób, ich komputery stają się serwerami lustrzanymi serwera głównego. 
 
-This initial cloning operation can be expensive, especially if there's a long history, but it pays off in the long run. One immediate benefit is that when an old save is desired for any reason, communication with the central server is unnecessary.
+Taka wstępna operacja klonowania może być kosztowna, szczególnie jeśli historia zmian jest rozbudowana. Mimo tego jest to podejście opłacalne w dłuższej perspektywie czasowej. Oczywistą korzyścią takiego rozwiązania jest zapewnienie dostępu do starszych rewizji bez konieczności komunikowania się z serwerem głównym.
 
-=== A Silly Superstition ===
+=== Nieuzasadniony przesąd ===
 
-A popular misconception is that distributed systems are ill-suited for projects requiring an official central repository. Nothing could be further from the truth. Photographing someone does not cause their soul to be stolen. Similarly, cloning the master repository does not diminish its importance.
+Zgodnie z popularnym nieporozumieniem, systemy rozproszonę nie pasują do projektów wymagających oficjalnego repozytorium centralnego. Nic bardziej mylnego. 
+Robienie komuś zdjęć nie kradnie ich dusz. Analogicznie, klonowanie repozytorium głównego nie pomniejsza jego ważności.
+
+
 
 A good first approximation is that anything a centralized version control system can do, a well-designed distributed system can do better. Network resources are simply costlier than local resources. While we shall later see there are drawbacks to a distributed approach, one is less likely to make erroneous comparisons with this rule of thumb.
 
