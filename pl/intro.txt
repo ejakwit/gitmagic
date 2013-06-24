@@ -1,4 +1,4 @@
-﻿== Wstęp ==
+== Wstęp ==
 
 Posłużę się analogią do wyjaśnienia czym jest system kontroli wersji. Bardziej sformalizowaną definicję znajdziesz na http://pl.wikipedia.org/wiki/System_kontroli_wersji[stronie Wikipedii poświęconej systemom kontroli wersji]. 
 

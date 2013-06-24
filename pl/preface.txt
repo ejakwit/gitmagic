@@ -1,10 +1,10 @@
-﻿= Magia Gita =
+= Magia Gita =
 Ben Lynn
 Sierpień 2007
 
 == Przedmowa ==
 
-http://git-scm.com/[Git] jest szwajcarskim scyzorykiem w świecie systemów kontroli wersji. Git to niezawodny i uniwersalny system kontroli wersji, którego elastycznośc sprawia, że jego nauka może sprawiać kłopoty, zwłaszcza w przypadku skomplikowanych zagadnień.
+http://git-scm.com/[Git] jest szwajcarskim scyzorykiem w świecie systemów kontroli wersji. Git to niezawodny i uniwersalny system kontroli wersji, którego elastyczność sprawia, że jego nauka może sprawiać kłopoty, zwłaszcza w przypadku skomplikowanych zagadnień.
 
 Arthur C. Clarke stwierdził: "każda wystarczająco skomplikowana technologia jest nierozróżnialna od magii". Jest to świetny sposób na postrzeganie Gita: początkujący mogą zignorować jego wewnętrzne mechanizmy i traktować Gita jak czarną skrzynkę, która potrafi zadziwić przyjaciół i rozwścieczyć wrogów za pomocą swoich cudownych możliwości.
 
