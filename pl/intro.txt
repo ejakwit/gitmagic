@@ -41,22 +41,18 @@ Taka wstępna operacja klonowania może być kosztowna, szczególnie jeśli hist
 Zgodnie z popularnym nieporozumieniem, systemy rozproszonę nie pasują do projektów wymagających oficjalnego repozytorium centralnego. Nic bardziej mylnego. 
 Robienie komuś zdjęć nie kradnie ich dusz. Analogicznie, klonowanie repozytorium głównego nie pomniejsza jego ważności.
 
+Ogólnie można powiedzieć, że wszystko co potrafi scentralizowany system kontroli wersji, dobrze zaprojektowany system rozproszony potrafi zrobić lepiej. Wynika to z faktu, że zasoby sieciowe są bardziej kosztowne od lokalnych. Mimo, iż później poznamy mankamenty podejścia rozproszonego, nie powinniśmy dokonywać fałszywych porównań przemawiających na niekorzyść podejścia rozproszonego.
 
+Być może małe projekty potrzebują jedynie ułamka funkcjonalności oferowanych przez takie systemy, ale używanie nieskalowalnych systemów do mały projektów jest jak używanie liczb rzymskich do obliczeń zmiennoprzecinkowych.
 
-A good first approximation is that anything a centralized version control system can do, a well-designed distributed system can do better. Network resources are simply costlier than local resources. While we shall later see there are drawbacks to a distributed approach, one is less likely to make erroneous comparisons with this rule of thumb.
+Co więcej, twój projekt może przerosnąć twoje pierwotne oczekiwania. Używanie Gita od początku projektu jest jak noszenie scyzoryka mimo że potrzebujesz jedynie otwieracza do butelek. Któregoś dnia będziesz potrzebował śrubokręta i wtedy docenisz że masz ze sobą coś więcej niż zwykły otwieracz do butelek. 
 
-A small project may only need a fraction of the features offered by such a
-system, but using systems that scale poorly for tiny projects is like using
-Roman numerals for calculations involving small numbers.
+=== Konflikty przy operacji merge ===
 
-Moreover, your project may grow beyond your original expectations. Using Git from the outset is like carrying a Swiss army knife even though you mostly use it to open bottles. On the day you desperately need a screwdriver you'll be glad you have more than a plain bottle-opener.
+Na potrzeby tego tematu, analogia do gier komputerowych przestaje być odpowiednia. Zamiast niej, rozważmy ponownie przypadek edytowania dokumentu.
 
-=== Merge Conflicts ===
+Załóżmy, że Alicja dodaje linię tekstu na początku pliku, a Bob dopisuje linię na końcu swojej kopii. Oboje wgrywają swoje zmiany. Większość systemów automatycznie podejmie rozsądne działania: zaakceptuje i połączy ich zmiany, tak że edycje Alicji i Boba zostaną zapisane. 
 
-For this topic, our computer game analogy becomes too thinly stretched. Instead, let us again consider editing a document.
+A teraz załóżmy, że Alicja i Bob zrobimy znaczące zmiany w tej samej lini dokumentu. W takiej systuacji, nie jest możliwe rozwiązanie konfliktu bez ludzkie interwencji. Drugą osoba próbująca załadować swoje zmiany zostanie poinformowana o wystąpieniu konfliktu łączenia (_merge conflict_) i będzie zmuszona powtórnego wprowadzenia swoich zmian lub zrewidowania całej lini.
 
-Suppose Alice inserts a line at the beginning of a file, and Bob appends one at the end of his copy. They both upload their changes. Most systems will automatically deduce a reasonable course of action: accept and merge their changes, so both Alice's and Bob's edits are applied.
-
-Now suppose both Alice and Bob have made distinct edits to the same line. Then it is impossible to proceed without human intervention. The second person to upload is informed of a _merge conflict_, and must choose one edit over another, or revise the line entirely.
-
-More complex situations can arise. Version control systems handle the simpler cases themselves, and leave the difficult cases for humans. Usually their behaviour is configurable.
+Bardziej skomplikowane sytuacje również mogą wystąpić. System kontroli wersji obsługują prostsze przypadki automatycznie, zostawiając te bardziej skomplikowane dla ludzi. Zwykle ich zachowanie jest konfigurowalne.
