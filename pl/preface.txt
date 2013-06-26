@@ -20,6 +20,7 @@ Zamiast wchodzić w szczegóły, zaprezentujemy zgrubne instrukcje prowadzące d
  - link:/~blynn/gitmagic/intl/es/[hiszpański]: Rodrigo Toledo i Ariset Llerena Tapia.
  - link:/~blynn/gitmagic/intl/uk/[ukraiński]: Volodymyr Bodenchuk.
  - link:/~blynn/gitmagic/intl/vi/[wietnamski]: Trần Ngọc Quân. Dostępne również na http://vnwildman.users.sourceforge.net/gitmagic/[tej stronie].
+ - ling:/~blynn/gitmagic/intl/pl/[polski]: Jakub Witczak
 
 .Inne wydania
 

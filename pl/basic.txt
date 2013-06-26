@@ -1,50 +1,48 @@
-﻿== Basic Tricks ==
+﻿== Podstawowe triki ==
 
-Rather than diving into a sea of Git commands, use these elementary examples to
-get your feet wet. Despite their simplicity, each of them are useful.
-Indeed, in my first months with Git I never ventured beyond the material in this chapter.
+Zamiast zgłębiać ogrom komend Gita możesz użyć tych podstawowych przedstawionych w tym rozdziale co umożliwi Ci szybkie osiągnięcie celu. Pomimo swojej prostoty, każda z nich jest użyteczna.  
+Co więcej, w trakcie pierwszych miesięcy korzystania z Gita, nigdy nie potrzebowałem wiedzy spoza tego rozdziału.
 
-=== Saving State ===
+=== Zapisywanie stanu ===
 
-About to attempt something drastic? Before you do, take a snapshot of all files
-in the current directory with:
+Chcesz wprowadzić ryzykowną zmianę? Zanim to zrobisz, użyj poniższych komend żeby zapisać stan wszystkich plików w aktualnym folderze:
 
  $ git init
  $ git add .
- $ git commit -m "My first backup"
+ $ git commit -m "Mój pierwszy backup"
 
-Now if your new edits go awry, restore the pristine version:
+Jeśli wprowadzisz złe zmiany, możesz odzyskać poprzednie wersję za pomocą komendy:
 
  $ git reset --hard
 
-To save the state again:
+Aby ponownie zapisać stan zmienionych plików:
 
- $ git commit -a -m "Another backup"
+ $ git commit -a -m "Kolejny backup"
 
-=== Add, Delete, Rename ===
+=== Dodawanie, usuwanie, zmiana nazwy ===
 
-The above only keeps track of the files that were present when you first ran *git add*. If you add new files or subdirectories, you'll have to tell Git:
+Powyższe komendy śledzą zmiany w plikach które były dostępne, gdy pierwszy raz wykonano komendę *git add*. Jeśli dodasz nowe pliki albo podkatalogi, wtedy musisz poinformować o tym Gita:
 
  $ git add readme.txt Documentation
 
-Similarly, if you want Git to forget about certain files:
+Analogicznie, jeśli chcesz aby Git zapomniał o plikach:
 
  $ git rm kludge.h obsolete.c
  $ git rm -r incriminating/evidence/
 
-Git deletes these files for you if you haven't already.
+Git skasuje za Ciebie te pliki, jeśli jeszcze je tam znajdzie.
 
-Renaming a file is the same as removing the old name and adding the new name. There's also the shortcut *git mv* which has the same syntax as the *mv* command. For example:
+Zmiana nazwy pliku polega na usunięciu starej nazwy i dodaniu nowej. Istnieje skrót *git mv* posiadający taką samą składnię jak komenda *mv*. Na przykład:
 
  $ git mv bug.c feature.c
 
-=== Advanced Undo/Redo ===
+=== Zaawansowane Cofnij/Powtórz ===
 
-Sometimes you just want to go back and forget about every change past a certain point because they're all wrong. Then:
+Czasami chcesz po prostu wrócić i zapomnieć o każdej zmianie od pewnego punktu w czasie, ponieważ wszystkie późniejsze zmiany były błędne. W takiej sytuacji:
 
  $ git log
 
-shows you a list of recent commits, and their SHA1 hashes:
+pokazuje listę ostatnich wprowadzonych zmian oraz ich sum kontrolnych SHA1:
 
 ----------------------------------
 commit 766f9881690d240ba334153047649b8b8f11c664
@@ -60,12 +58,13 @@ Date:   Thu Jan 1 00:00:00 1970 +0000
     Initial commit.
 ----------------------------------
 
-The first few characters of the hash are enough to specify the commit;
-alternatively, copy and paste the entire hash. Type:
+Pierwsze kilka znaków sumy kontrolnej jest wystarczające do określenia zmiany; ewentualnie, możesz skopiować i wkleić całą sumę kontrolną. Wpisz:
 
  $ git reset --hard 766f
 
-to restore the state to a given commit and erase all newer commits from the record permanently.
+aby przywrócić stan z określonego punktu czasowego i trwale usunąć informacje o wszystkich wprowadzonych później zmianach.
+
+XXX
 
 Other times you want to hop to an old state briefly. In this case, type:
 
