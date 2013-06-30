@@ -64,22 +64,19 @@ Pierwsze kilka znaków sumy kontrolnej jest wystarczające do określenia zmiany
 
 aby przywrócić stan z określonego punktu czasowego i trwale usunąć informacje o wszystkich wprowadzonych później zmianach.
 
-XXX
-
-Other times you want to hop to an old state briefly. In this case, type:
+Jeśli chcesz tymczasowo powrócić do poprzedniego stany, wpisz:
 
  $ git checkout 82f5
 
-This takes you back in time, while preserving newer commits. However, like time travel in a science-fiction movie, if you now edit and commit, you will be in an alternate reality, because your actions are different to what they were the first time around.
+Ta komenda cofnie Cię w czasie, jednocześnie zachowując nowsze wersje. Podobnie jak w przypadku podróży w czasie, jeśli dokonasz zmian na przeszłej wersji a następnie zapiszesz wersję w repozytorium przy pomocy komendy commit znajdziesz się w alternatywnej rzeczywistości, ponieważ twoje akcje są inne niż gdy wykonywałeś je za pierwszym razem. 
 
-This alternate reality is called a 'branch', and <<branch,we'll have more to say about this later>>. For now, just remember that
+Tą alternatywną rzeczywistość nazywamy 'gałęzią' (ang. branch) i <<branch, omówimy dokładnie w dalszej części>>. W tym momencie, zapamiętaj że: 
 
  $ git checkout master
 
-will take you back to the present. Also, to stop Git complaining, always
-commit or reset your changes before running checkout.
+przeniesię Cię z powrotem do teraźniejszości. Aby uniknąć narzekań Gita, zawsze wykonaj commit lub reset na swoich zmianach zanim wykonasz checkout. 
 
-To take the computer game analogy again:
+Wracając do analogii z grami komputerowymi:
 
 - *`git reset --hard`*: load an old save and delete all saved games newer than the one just loaded.
 
