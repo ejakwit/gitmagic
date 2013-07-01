@@ -78,36 +78,33 @@ przeniesię Cię z powrotem do teraźniejszości. Aby uniknąć narzekań Gita, 
 
 Wracając do analogii z grami komputerowymi:
 
-- *`git reset --hard`*: load an old save and delete all saved games newer than the one just loaded.
+- *`git reset --hard`*: otwiera starszy stan gry i kasuje wszystkie zapisane stany gry nowsze niż właśnie załadowany
 
-- *`git checkout`*: load an old game, but if you play on, the game state will deviate from the newer saves you made the first time around. Any saved games you make now will end up in a separate branch representing the alternate reality you have entered. <<branch,We deal with this later>>.
+- *`git checkout`*:  otwiera starszy stan gry, ale jeśli będziesz na nim grał, to stan gry będzie różnił się od nowszych stanów gry zapisanych, gdy grałeś po raz pierwszy. W związku z tym, nowe stany gry będą zapisywane na osobnej gałęzi reprezentującej alternatywną rzeczywistość do której wkroczyłeś. <<branch,Omówimy to w dalszej części>>. 
 
-You can choose only to restore particular files and subdirectories by appending them after the command:
+Możesz otworzyć jedynie wybrane pliki i podkatalogi poprzez dopisanie ich na końcu komendy:
 
- $ git checkout 82f5 some.file another.file
+ $ git checkout 82f5 jakis.plik jakis_inny.plik
 
-Take care, as this form of *checkout* can silently overwrite files. To
-prevent accidents, commit before running any checkout command, especially when
-first learning Git. In general, whenever you feel unsure about any operation, Git command or not, first run *git commit -a*.
+Bądź ostrożny, ponieważ ta postać komendy *checkout* może po cichu nadpisać pliki. Aby nie utracić zmian, wywołaj komendę commit przed wywowałeniem checkou checkout, zwłaszcza jeśli uczysz się Gita. Ogólnie, jeśli masz wątpliwości czy wykonać daną komendę, uruchom najpierw *git commit -a*. 
 
-Don't like cutting and pasting hashes? Then use:
+Jeśli nie lubisz kopiowania i wklejania sum kontrolnych, użyj komendy: 
 
- $ git checkout :/"My first b"
+ $ git checkout :/"Mój pierwszy b"
 
-to jump to the commit that starts with a given message.
-You can also ask for the 5th-last saved state:
+aby przeskoczyć do wersji zaczynającej się od podanego tekstu.
+Możesz również odtworzyć 5-tą zapisanę wersję:
 
  $ git checkout master~5
 
-=== Reverting ===
+=== Przywracanie (revert) ===
 
-In a court of law, events can be stricken from the record. Likewise, you can pick specific commits to undo.
+Zdarzenie w sądzie mogą zostać wyłączone z protokołu. Podobnie w Gicie, możesz wycofać wybranę operacje commit. Komenda:
 
  $ git commit -a
  $ git revert 1b6d
 
-will undo just the commit with the given hash. The revert is recorded as a new
-commit, which you can confirm by running *git log*.
+wycofa tylko commit określony przez podaną sumę kontrolną. Wycofanie wersji zostanie zapisane jako kolejna operacja commit, co możesz sprawdzić poprzez wykonanie komendy *git log*.
 
 === Changelog Generation ===
 
