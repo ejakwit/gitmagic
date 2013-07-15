@@ -107,7 +107,7 @@ Zdarzenie w sądzie mogą zostać wyłączone z protokołu. Podobnie w Gicie, mo
 wycofa tylko commit określony przez podaną sumę kontrolną. Wycofanie wersji zostanie zapisane jako kolejna operacja commit, co możesz sprawdzić poprzez wykonanie komendy *git log*.
 
 === Changelog Generation ===
-jakiś testoółóżźćńę
+
 Some projects require a http://en.wikipedia.org/wiki/Changelog[changelog].
 Generate one by typing:
 
