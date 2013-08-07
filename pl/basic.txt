@@ -106,96 +106,96 @@ Zdarzenie w sądzie mogą zostać wyłączone z protokołu. Podobnie w Gicie, mo
 
 wycofa tylko commit określony przez podaną sumę kontrolną. Wycofanie wersji zostanie zapisane jako kolejna operacja commit, co możesz sprawdzić poprzez wykonanie komendy *git log*.
 
-=== Changelog Generation ===
+=== Generowanie changeloga ===
 
-Some projects require a http://en.wikipedia.org/wiki/Changelog[changelog].
-Generate one by typing:
+Niektóre projekty wymagają http://pl.wikipedia.org/wiki/Changelog[changeloga].
+Aby go wygenerować, użyj komendy:
 
  $ git log > ChangeLog
 
-=== Downloading Files ===
+=== Pobieranie plików ===
 
-Get a copy of a project managed with Git by typing:
+Aby pobrać kopię projektu utrzymywanego w Gicie, wywołaj komendę:
 
  $ git clone git://server/path/to/files
 
-For example, to get all the files I used to create this site:
+Na przykład, aby pobrać wszystkie pliki stworzone na potzeby tej strony wywołaj:
 
  $ git clone git://git.or.cz/gitmagic.git
 
-We'll have much to say about the *clone* command soon.
+Wkrótce powiemy więcej na temat komendy *clone*.
 
-=== The Bleeding Edge ===
+=== Pobieranie najnowszej wersji ===
 
-If you've already downloaded a copy of a project using *git clone*, you can upgrade to the latest version with:
+Jeśli pobrałeś kopię projektu za pomocą komendy *git clone*, możesz zaktualizować ją do ostatniej wersji przy pomocy komendy:
 
  $ git pull
 
-=== Instant Publishing ===
+=== Publikowanie zmian ===
 
-Suppose you've written a script you'd like to share with others. You could just tell them to download from your computer, but if they do so while you're improving the script or making experimental changes, they could wind up in trouble.  Of course, this is why release cycles exist. Developers may work on a project frequently, but they only make the code available when they feel it is presentable.
+Załóżmy, że chcemy pokazać nową wersję skryptu innym. Jednym z rozwiązań jest poproszenie innych o pobranie pliku bezpośrednio z twojego komputera. Niestety jeśli rozpoczną pobieranie w trakcie gdy modyfikujesz zawartość pliku lub wprowadzasz poprawki mogą wpaść w tarapaty. Z tego powodu, oprogramowanie udostępnia się cyklicznie w chwili gdy programiści uznają że produkt jest na to gotowy. Dzięki wykorzystaniu Gita, zespół programistów może intensywnie pracować nad projektem wykorzystującym Gita oraz udostępniać określoną wersję użytkownikom w momencie gdy kod jest na to gotowy. 
 
-To do this with Git, in the directory where your script resides:
+Aby to zrealizować, należy wykonać następującą komendę z katalogu w który znajduje się skrypt:
 
  $ git init
  $ git add .
- $ git commit -m "First release"
+ $ git commit -m "Pierwsza opublikowana wersja"
 
-Then tell your users to run:
+Następnie poproś użytkowników o wywołanie komendy:
 
- $ git clone your.computer:/path/to/script
+ $ git clone adres.twojego.komputera:/ścieżka/do/skryptu
 
-to download your script. This assumes they have ssh access. If not, run *git daemon* and tell your users to instead run:
+w celu pobrania ostatniej opublikowanej wersji skryptu. Powyższa komenda zakłada, użytkownicy mają dostęp SSH do twojej maszyny. Jeśli tak nie jest, uruchom *git daemon* i poproś użytkowników o wywołanie następującej komendy w zamian:
 
- $ git clone git://your.computer/path/to/script
+ $ git clone git://adres.twojego.komputera/ścieżka/do/skryptu
 
-From now on, every time your script is ready for release, execute:
+Od tego momentu, za każdym razem gdy uznasz że nowa wersja skryptu jest gotowa do opublikowania wywołaj:
 
- $ git commit -a -m "Next release"
+ $ git commit -a -m "Następna opublikowana wersja"
 
-and your users can upgrade their version by changing to the directory containing your script and typing:
+oraz po stronie użytkowników konieczne będzie uruchomienie następującej komendy w folderze zawierającym skrypt:
 
  $ git pull
 
-Your users will never end up with a version of your script you don't want them to see.
+Twoi użytkownicy nigdy nie pobiorą wersji skryptu której nie chciałeś opublikować.
 
-=== What Have I Done? ===
+=== Wyświetlanie swoich zmian ===
 
-Find out what changes you've made since the last commit with:
+Aby dowiedzieć się jakie zmiany zrobiono po ostatniej operacji commit użyj komendy:
 
  $ git diff
 
-Or since yesterday:
+Jeśli interesują nas zmiany od wczoraj:
 
  $ git diff "@{yesterday}"
 
-Or between a particular version and 2 versions ago:
+Jeśli chcemy zobaczyć zmiany pomiędzy określoną wersją a 2 wersjami wstecz względem wersji aktualnej:
 
  $ git diff 1b6d "master~2"
 
-In each case the output is a patch that can be applied with *git apply*.
-Try also:
+W każdy z powyższych przypadków, na wyjściu otrzymamy patch(łatkę) który możemy nanieść komendą *git apply*. 
+Spróbuj również:
 
  $ git whatchanged --since="2 weeks ago"
 
-Often I'll browse history with http://sourceforge.net/projects/qgit[qgit] instead, due to its slick photogenic interface, or http://jonas.nitro.dk/tig/[tig], a text-mode interface that works well over slow connections. Alternatively, install a web server, run *git instaweb* and fire up any web browser.
+Często przeglądam historię zmian przy użyciu http://sourceforge.net/projects/qgit[qgit], z powodu jego schludnego i fotogenicznego interfejsu albo http://jonas.nitro.dk/tig/[tig], tekstowego interfejsu który działa dobrze w oparciu o wolne połączenia sieciowe. Kolejną opcją jest zainstalowanie serwera WWW, wykonanie komendy *git instaweb* i uruchomienie interfejsu GITa w dowolnej przeglądarce.
 
-=== Exercise ===
+=== Ćwieczenie ===
 
-Let A, B, C, D be four successive commits where B is the same as A except some files have been removed. We want to add the files back at D. How can we do this?
+Niech A, B, C, D będą czterema kolejnymi wersjami, gdzie B różni się od A tym że niektóre pliki zostały skasowane. Twoim zadaniem jest przywrócenie skasowanych plików z powrotem do wersji D. Jak to osiągniesz?
 
-There are at least three solutions. Assuming we are at D:
+Istnieją przynajmniej 3 rozwiązania tego problemu. Zakładając że obecną wersją jest D:
 
-  1. The difference between A and B are the removed files. We can create a patch representing this difference and apply it:
+  1. Wersje A i B różnią się jedynie usuniętymi plikami. Możemy stworzyć patch odpowiadający tym zmianom a następnie nanieść go na obecną wersję:
 
    $ git diff B A | git apply
 
-  2. Since we saved the files back at A, we can retrieve them:
+  2. Ponieważ zapisaliśmy skasowane pliki w wersji A, możemy odtworzyć je komendą:
 
    $ git checkout A foo.c bar.h
 
-  3. We can view going from A to B as a change we want to undo:
+  3. Możemy spojrzeć na przejście z wersji A do B jak na zmianę którą chcemy anulować:
 
    $ git revert B
 
-Which choice is best? Whichever you prefer most. It is easy to get what you want with Git, and often there are many ways to get it.
+Które rozwiązanie jest najlepsze? Którekolwiek ci najbardziej odpowiada. Przy użyciu Gita łatwo osiągnąć cel oraz zwykle jest wiele dróg do osiągnięcia go.
