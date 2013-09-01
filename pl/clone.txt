@@ -1,10 +1,10 @@
-== Cloning Around ==
+== Wszechobecne klonowanie ==
 
-In older version control systems, checkout is the standard operation to get files. You retrieve a bunch of files in a particular saved state.
+W starszych systemach kontroli wersji, 'checkout' jest standardow¹ operacj¹ s³u¿¹c¹ do pobierania plików. Za jej pomoc¹ pobiera siê zestaw plików w okreœlonej wersji.
 
-In Git and other distributed version control systems, cloning is the standard operation. To get files, you create a 'clone' of the entire repository. In other words, you practically mirror the central server. Anything the main repository can do, you can do.
+W Gicie i innych rozproszonych systemach kontroli wersji, klonowanie jest standardow¹ operacj¹. Aby pobraæ pliki, tworzysz klon ca³ego repozytorium. Innymi s³owy, tworzysz lustrzany obraz serwera centralnego. Wszystko co mo¿e zostaæ zrealizowane na g³ównym repozytorium, mo¿esz zrealizowaæ na w³asnej kopii.
 
-=== Sync Computers ===
+=== Synchronizacja komputerów ===
 
 I can tolerate making tarballs or using *rsync* for backups and basic syncing. But sometimes I edit on my laptop, other times on my desktop, and the two may not have talked to each other in between.
 
